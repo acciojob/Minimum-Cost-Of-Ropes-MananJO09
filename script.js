@@ -1,3 +1,16 @@
+button.onclick = function () {
+  const inputField = document.querySelector('input[type="text"]');
+  const result = document.getElementById('result');
+  
+  // Get the input values and convert them into an array of integers
+  const arr = inputField.value.split(',').map(Number);
+  const n = arr.length;
+  
+  const minCost = calculateMinCost(arr, n);
+  // Update the result div with the calculated minimum cost
+  result.textContent = minCost;
+}
+
 function calculateMinCost(arr,n) {
   //your code here
 	let pq=[];
